@@ -1,14 +1,41 @@
-; load-path
-(add-to-list 'load-path "~/.emacs.d/elisp")
+;; ~/.emacs.d/site-lisp 以下全部読み込み
+(let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
+  (add-to-list 'load-path default-directory)
+  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+      (normal-top-level-add-subdirs-to-load-path)))
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(defvar installing-package-list
+  '(
+    ;; ここに使っているパッケージを書く。
+    helm
+    helm-ag
+    helm-c-moccur
+    helm-descbinds
+    helm-gtags
+    helm-migemo
+    wgrep-helm
+    init-loader
+    popwin
+    php-mode
+    ))
+
+(dolist (package installing-package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+
 (set-language-environment "Japanese")
 
 ; line number
-;(require 'wb-line-number)
-;(wb-line-number-toggle)
 (global-linum-mode t)
 (setq linum-format "%4d|")
 
-(tool-bar-mode 0)
+;(tool-bar-mode 0)
 (setq inhibit-startup-message t)
 (setq backup-inhibited t)
 (setq delete-auto-save-files t)
@@ -40,32 +67,9 @@
 ; view
 (setq frame-title-format (format "emacs@%s : %%f" (system-name)))
 
-; color
-(setq custom-theme-directory "~/.emacs.d/themes/")
-(load-theme 'wombat t)
-
-(require 'php-mode)
-(load "~/.emacs.d/elisp/php-set.el")
-
-; auto-install
-(require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/elisp/auto-install/")
-(auto-install-update-emacswiki-package-name t)
-(auto-install-compatibility-setup)
-
 (require 'cl)
 (fset 'yes-or-no-p 'y-or-n-p)
 
-; yasnippet
-(add-to-list 'load-path
-             (expand-file-name "~/.emacs.d/elisp/yasnippet"))
-(require 'yasnippet)
-(setq yas-snippet-dirs
-      '("~/.emacs.d/snippets"
-        ))
-(yas-global-mode 1)
-
-;; define key
-(define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
-(define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
-(define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+(require 'init-loader)
+(setq init-loader-show-log-after-init nil)
+(init-loader-load "~/.emacs.d/inits")
