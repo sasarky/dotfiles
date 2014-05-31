@@ -112,4 +112,4 @@ zstyle ':filter-select' case-insensitive yes
 bindkey '^xb' zaw-cdr
 bindkey '^x^b' zaw-git-recent-branches
 bindkey '^x^f' zaw-git-files
-bindkey '^x^r' zaw-history
+bindkey '^r' zaw-history
