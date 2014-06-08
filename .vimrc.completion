@@ -6,6 +6,3 @@ cnoremap <C-p> <Up>
 cnoremap <Up>  <C-p>
 cnoremap <C-n> <Down>
 cnoremap <Down>  <C-n>
-
-" 補完にneocomplcacheを使う
-source ~/.vimrc.neocomplcache

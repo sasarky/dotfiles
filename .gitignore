@@ -1,3 +1,4 @@
 .vim/bundle
 .vim/snippets
 .emacs.d/elpa/
+.emacs.d/auto-save-list

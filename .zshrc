@@ -25,8 +25,8 @@ setopt always_to_end                            # 保管したら文字列末尾
 setopt brace_ccl                # {a-c} を a b cに展開する
 setopt auto_cd                  # ディレクトリ名でcdする
 setopt pushd_ignore_dups        # ディレクトリスタックに同じディレクトリを追加しないようにする
-setopt correct                  # コマンドのスペルチェック
-setopt correct_all              # コマンドライン全てのスペルチェック
+#setopt correct                  # コマンドのスペルチェック
+#setopt correct_all              # コマンドライン全てのスペルチェック
 setopt no_clobber               # 上書きリダイレクトの禁止
 setopt path_dirs                # コマンド名に / が含まれている時PATH中のサブディレクトリを探す
 
@@ -90,9 +90,10 @@ export LC_MEASUREMENT=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
 export LC_TIME=ja_JP.UTF-8
 export LC_NAME=ja_JP.UTF-8
+export WORDCHARS="*?_-.[]~&;!#$%^(){}<>"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 
 alias lv='lv -Ou8'
 

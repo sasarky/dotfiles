@@ -1,20 +1,29 @@
-;;; helm
+; helm
 (require 'helm-config)
 (helm-descbinds-mode)
 (require 'helm-migemo)
 (setq helm-use-migemo t)
+(require 'helm-projectile)
 
-;;; keybinds
-;(define-key helm-map (kbd "C-h") 'delete-backward-char)
-;(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
-;(define-key global-map (kbd "C-x C-f") 'helm-find-files)
-;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
-;(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+; setq
+(setq helm-for-files-preferred-list
+      '(helm-source-buffers-list
+        helm-source-bookmarks
+        helm-source-recentf
+        helm-source-file-cache
+        helm-projectile
+        helm-source-locate))
 
-(define-key global-map (kbd "C-x b") 'my-helm)
+; keybinds
+(define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key global-map (kbd "M-x") 'helm-M-x)
 (define-key global-map (kbd "C-x C-r") 'helm-recentf)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (define-key global-map (kbd "M-r") 'helm-resume)
+(define-key global-map (kbd "C-x C-f") 'helm-projectile)
+(define-key global-map (kbd "C-x C-u") 'helm-for-files)
 
-(push '("^\*helm .+\*$" :regexp t) popwin:special-display-config)
+(eval-after-load "helm-files"
+  '(setq helm-for-files-preferred-list (delete 'helm-source-locate helm-for-files-preferred-list)))
+
+(push '("*helm*") popwin:special-display-config)
