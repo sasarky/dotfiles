@@ -1,8 +1,10 @@
+set runtimepath+=~/.vim/
+
 "Bundle
-source ~/.vimrc.bundle
+source ~/.vim/inits/.vimrc.bundle
 
 "その他
-source ~/.vimrc.basic
-source ~/.vimrc.unite
-source ~/.vimrc.lightline
-source ~/.vimrc.completion
+source ~/.vim/inits/.vimrc.basic
+source ~/.vim/inits/.vimrc.unite
+source ~/.vim/inits/.vimrc.lightline
+source ~/.vim/inits/.vimrc.completion
