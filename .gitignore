@@ -1,4 +1,5 @@
 .vim/bundle
 .vim/snippets
+.vim/.netrwhist
 .emacs.d/elpa/
 .emacs.d/auto-save-list

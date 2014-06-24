@@ -92,8 +92,8 @@ export LC_TIME=ja_JP.UTF-8
 export LC_NAME=ja_JP.UTF-8
 export WORDCHARS="*?_-.[]~&;!#$%^(){}<>"
 
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 alias lv='lv -Ou8'
 
@@ -114,3 +114,5 @@ bindkey '^xb' zaw-cdr
 bindkey '^x^b' zaw-git-recent-branches
 bindkey '^x^f' zaw-git-files
 bindkey '^r' zaw-history
+
+export NODE_ENV=development
