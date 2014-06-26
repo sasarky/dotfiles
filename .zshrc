@@ -19,6 +19,8 @@ setopt auto_menu                                # 補完キーを押すと順に
 setopt print_eight_bit                          # 日本語も正しく表示
 setopt complete_aliases                         # alias も補完対象にする
 setopt hist_no_store                            # history コマンドは追加しない
+setopt hist_ignore_all_dups                     # history は重複させない
+setopt hist_verify
 setopt always_to_end                            # 保管したら文字列末尾へ移動
 
 # その他便利機能
