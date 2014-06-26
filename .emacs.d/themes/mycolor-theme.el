@@ -4,7 +4,7 @@
  'mycolor
  ;; 背景・文字・カーソル
  '(cursor ((t (:foreground "#F8F8F0"))))
- '(default ((t (:background "#1B1D1E" :foreground "#F8F8F2"))))
+ '(default ((t (:background "Black" :foreground "#F8F8F2"))))
 
  ;; 選択範囲
  '(region ((t (:background "#403D3D"))))
