@@ -9,12 +9,15 @@
  `(highlight ((t (:foreground "#E37170" :background "#332323"))))
  `(region ((t (:foreground "#71d3b4" :background "#233323"))))
 
- `(font-lock-function-name-face ((t (:foreground "#f0dfaf"))))
- `(font-lock-variable-name-face ((t (:foreground "#f0dfaf"))))
- `(font-lock-string-name-face ((t (:foreground "#CC9393"))))
- `(font-lock-keyword-face ((t (:foreground "#f0dfaf" :weight bold))))
+ `(font-lock-function-name-face ((t (:foreground "#93E0E3"))))
+ `(font-lock-variable-name-face ((t (:foreground "#DFAF8F"))))
+ `(font-lock-string-face ((t (:foreground "#CC9393"))))
+ `(font-lock-keyword-face ((t (:foreground "#F0DFAF"))))
+ `(font-lock-builtin-face ((t (:foreground "#DCDCCC"))))
 
  `(font-lock-comment-face ((t (:foreground "#709080"))))
+ `(font-lock-warning-face ((t (:foreground "#709080"))))
+
 )
 
 ;;;###autoload
