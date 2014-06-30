@@ -2,7 +2,7 @@
 
 ; line number
 (global-linum-mode t)
-(setq linum-format "%4d|")
+(setq linum-format "%4d ")
 
 ;(tool-bar-mode 0)
 (setq inhibit-startup-message t)
