@@ -1,5 +1,12 @@
 (defvar installing-package-list
   '(
+    ; basic
+    auto-complete
+    init-loader
+    magit
+    popwin
+
+    ; helm
     helm
     helm-ag
     helm-c-moccur
@@ -7,9 +14,11 @@
     helm-gtags
     helm-migemo
     wgrep-helm
-    init-loader
-    popwin
+
+    ; language-mode
     php-mode
+    coffee-mode
+
     ))
 
 (let ((not-installed (loop for x in installing-package-list when (not (package-installed-p x)) collect x)))
