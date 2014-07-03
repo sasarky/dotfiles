@@ -8,7 +8,7 @@ let g:colors_name="mycolor"
 
 hi Boolean         ctermfg=181
 hi Character       ctermfg=181   cterm=bold
-hi Comment         ctermfg=108
+hi Comment         ctermfg=244
 hi Conditional     ctermfg=223   cterm=bold
 hi Constant        ctermfg=181   cterm=bold
 hi Cursor          ctermfg=233   ctermbg=109     cterm=bold
@@ -60,12 +60,3 @@ hi VertSplit       ctermfg=236   ctermbg=65
 hi VisualNOS       ctermfg=236   ctermbg=210     cterm=bold
 hi WarningMsg      ctermfg=231   ctermbg=236     cterm=bold
 hi WildMenu        ctermfg=194   ctermbg=236     cterm=underline
-
-" spellchecking,
-" always
-" "bright"
-" background
-hi SpellLocal ctermfg=14  ctermbg=237
-hi SpellBad   ctermfg=9   ctermbg=237
-hi SpellCap   ctermfg=12  ctermbg=237
-hi SpellRare  ctermfg=13  ctermbg=237
