@@ -28,7 +28,7 @@ hi Identifier      ctermfg=223
 hi Include         ctermfg=180   cterm=bold
 hi IncSearch       ctermfg=228   ctermbg=23
 hi Keyword         ctermfg=223   cterm=bold
-hi LineNr          ctermfg=248   ctermbg=233
+hi LineNr          ctermfg=248
 hi Macro           ctermfg=223   cterm=bold
 hi MatchParen      ctermfg=229   ctermbg=237     cterm=bold
 hi ModeMsg         ctermfg=223   cterm=none

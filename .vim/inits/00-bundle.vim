@@ -8,6 +8,11 @@ endif
 
 " NeoBundle
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'Align'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'smartword'
+NeoBundle 'thinca/vim-quickrun'
+
 
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neomru.vim', {'depends' : 'Shougo/unite.vim'}
