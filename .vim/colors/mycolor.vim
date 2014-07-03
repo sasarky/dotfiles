@@ -60,3 +60,15 @@ hi VertSplit       ctermfg=236   ctermbg=65
 hi VisualNOS       ctermfg=236   ctermbg=210     cterm=bold
 hi WarningMsg      ctermfg=231   ctermbg=236     cterm=bold
 hi WildMenu        ctermfg=194   ctermbg=236     cterm=underline
+
+" PHP
+hi! link phpFunctions Function
+hi! link phpSuperglobal Identifier
+hi! link phpQuoteSingle StringDelimiter
+hi! link phpQuoteDouble StringDelimiter
+hi! link phpBoolean Constant
+hi! link phpNull Constant
+hi! link phpArrayPair Operator
+hi! link phpOperator Normal
+hi! link phpRelation Normal
+hi! link phpVarSelector Identifier
