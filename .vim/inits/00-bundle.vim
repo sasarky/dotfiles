@@ -22,10 +22,12 @@ NeoBundle 'Shougo/vimfiler'
 
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
-NeoBundle "Shougo/neosnippet-snippets"
+NeoBundle 'Shougo/neosnippet-snippets'
 
-NeoBundle "thinca/vim-ref"
-NeoBundle "kchmck/vim-coffee-script"
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'davidhalter/jedi-vim'
+
 
 filetype plugin indent on
 filetype indent on
