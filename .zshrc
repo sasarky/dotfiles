@@ -101,7 +101,7 @@ fi
 
 if which pyenv > /dev/null; then
     export PYENV_ROOT=/usr/local/opt/pyenv
-    export PATH=$PATH:$PYENV_ROOT/shims:$PYENV_ROOT/bin
+    export PATH=$PYENV_ROOT/shims:$PATH
     eval "$(pyenv init -)";
 fi
 
