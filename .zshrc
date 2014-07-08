@@ -94,8 +94,16 @@ export LC_TIME=ja_JP.UTF-8
 export LC_NAME=ja_JP.UTF-8
 export WORDCHARS="*?_-.[]~&;!#$%^(){}<>"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
+if which pyenv > /dev/null; then
+    export PYENV_ROOT=/usr/local/opt/pyenv
+    export PATH=$PATH:$PYENV_ROOT/shims:$PYENV_ROOT/bin
+    eval "$(pyenv init -)";
+fi
 
 alias lv='lv -Ou8'
 
