@@ -126,5 +126,6 @@ bindkey '^x^f' zaw-git-files
 bindkey '^r' zaw-history
 
 export NODE_ENV=development
+export NODE_PATH=/usr/local/lib/node_modules
 
 export PYTHONPATH=$PYTHONPATH:$HOME/workspace/caucasus
