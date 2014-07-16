@@ -9,11 +9,11 @@ nmap f [unite]
 nnoremap [unite]u  :<C-u>Unite -no-split<Space>
 
 " 全部乗せ
-nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file fire_rec<CR>
+nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file file_rec<CR>
 " ファイル一覧
 nnoremap <silent> [unite]f  :<C-u>Unite -no-split -buffer-name=files file<CR>
 " ファイル一覧 (再帰)
-nnoremap <silent> [unite]h  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files file_rec<CR>
+nnoremap <silent> [unite]h  :<C-u>Unite -no-split -buffer-name=file file_rec/async<CR>
 " バッファ一覧
 nnoremap <silent> [unite]b  :<C-u>Unite -no-split buffer<CR>
 " 常用セット

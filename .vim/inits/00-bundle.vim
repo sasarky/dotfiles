@@ -27,6 +27,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'tpope/vim-rails'
 
 
 filetype plugin indent on
