@@ -17,7 +17,7 @@ nnoremap <silent> [unite]h  :<C-u>UniteWithCurrentDir -no-split -buffer-name=fil
 " バッファ一覧
 nnoremap <silent> [unite]b  :<C-u>Unite -no-split buffer<CR>
 " 常用セット
-nnoremap <silent> [unite]u  :<C-u>Unite -no-split -buffer-name=files buffer file_mru file_rec<CR>
+nnoremap <silent> [unite]u  :<C-u>Unite -no-split -buffer-name=buffer file_mru file_rec<CR>
 " 最近使用したファイル一覧
 nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
 " 現在のバッファのカレントディレクトリからファイル一覧
