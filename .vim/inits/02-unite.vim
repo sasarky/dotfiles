@@ -13,7 +13,7 @@ nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=fil
 " ファイル一覧
 nnoremap <silent> [unite]f  :<C-u>Unite -no-split -buffer-name=files file<CR>
 " ファイル一覧 (再帰)
-nnoremap <silent> [unite]h  :<C-u>Unite -no-split -buffer-name=file file_rec/async<CR>
+nnoremap <silent> [unite]h  :<C-u>Unite -no-split -buffer-name=file file_rec<CR>
 " バッファ一覧
 nnoremap <silent> [unite]b  :<C-u>Unite -no-split buffer<CR>
 " 常用セット
@@ -35,11 +35,12 @@ nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
 
 " unite grep に ag を使う
 if executable('ag')
-      let g:unite_source_grep_command = 'ag'
-        let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-          let g:unite_source_grep_recursive_opt = ''
-      endif
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
+let g:unite_source_file_mru_limit = 200
 let g:yankring_zap_keys = ""
 
 autocmd FileType unite call s:unite_my_settings()
@@ -54,16 +55,10 @@ function! s:unite_my_settings()
     let g:unite_enable_start_insert = 1
 
     " ウィンドウを分割して開く
-    nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('split')
-    inoremap <silent> <buffer> <expr> <C-l> unite#do_action('split')
+    nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+    inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
 
     " ウィンドウを縦に分割して開く
     nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
     inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
 endfunction
-
-let g:unite_source_file_mru_limit = 200
-
-" unite-plugins
-cnoremap UH Unite help<Enter>
-cnoremap UO Unite outline<Enter>
