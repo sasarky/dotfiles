@@ -105,6 +105,11 @@ if which pyenv > /dev/null; then
     eval "$(pyenv init -)";
 fi
 
+export GOPATH=~/gocode
+export PATH="$PATH:$GOPATH/bin"
+
+export PATH="$PATH:$HOME/.packer"
+
 alias lv='lv -Ou8'
 
 # cdr
