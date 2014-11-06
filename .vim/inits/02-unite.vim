@@ -9,21 +9,21 @@ nmap f [unite]
 nnoremap [unite]u  :<C-u>Unite -no-split<Space>
 
 " 全部乗せ
-nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file file_rec<CR>
+nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir buffer file_mru bookmark file file_rec<CR>
 " ファイル一覧
-nnoremap <silent> [unite]f  :<C-u>Unite -no-split -buffer-name=files file<CR>
+nnoremap <silent> [unite]f  :<C-u>Unite file<CR>
 " ファイル一覧 (再帰)
-nnoremap <silent> [unite]h  :<C-u>Unite -no-split -buffer-name=file file_rec<CR>
+nnoremap <silent> [unite]h  :<C-u>Unite file_rec<CR>
 " バッファ一覧
-nnoremap <silent> [unite]b  :<C-u>Unite -no-split buffer<CR>
+nnoremap <silent> [unite]b  :<C-u>Unite buffer<CR>
 " 常用セット
-nnoremap <silent> [unite]u  :<C-u>Unite -no-split -buffer-name=buffer file_mru file_rec<CR>
+nnoremap <silent> [unite]u  :<C-u>Unite file_mru file_rec<CR>
 " 最近使用したファイル一覧
-nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
+nnoremap <silent> [unite]m  :<C-u>Unite file_mru<CR>
 " 現在のバッファのカレントディレクトリからファイル一覧
-nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
+nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir file<CR>
 " レジスタ一覧
-nnoremap <silent> [unite]r  :<C-u>Unite -no-split register<CR>
+nnoremap <silent> [unite]r  :<C-u>Unite register<CR>
 " snippet一覧
 nnoremap <silent> [unite]s  :<C-u>Unite snippet<CR>
 " grep検索
@@ -81,4 +81,5 @@ function! s:unite_gitignore_source()
   call unite#custom#source('file_rec', 'ignore_pattern', pattern)
   call unite#custom#source('grep', 'ignore_pattern', pattern)
 endfunction
+
 call s:unite_gitignore_source()
