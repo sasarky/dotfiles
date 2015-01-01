@@ -128,7 +128,7 @@ zstyle ':filter-select' case-insensitive yes
 bindkey '^xb' zaw-cdr
 bindkey '^x^b' zaw-git-recent-branches
 bindkey '^x^f' zaw-git-files
-bindkey '^r' zaw-history
+bindkey '^xr' zaw-history
 
 export NODE_ENV=development
 export NODE_PATH=/usr/local/lib/node_modules
