@@ -262,7 +262,7 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
     elseif !l:fge && l:bge
       exec "hi ".a:group." ctermfg=".a:lcfg." ctermbg=NONE"
     elseif l:fge && !l:bge
-      exec "hi ".a:group." ctermfg=NONE ctermbg=".a:lcbg
+      exec "hi ".a:group." ctermfg=".a:lcfg." ctermbg=".a:lcbg
     endif
   else
     let l:fge = empty(a:fg)
@@ -471,10 +471,13 @@ if !s:low_color
   hi CursorColumn ctermbg=234
   hi CursorLine ctermbg=234
   hi SpecialKey ctermbg=234
-  hi NonText ctermbg=233
-  hi LineNr ctermbg=233
+  "hi NonText ctermbg=233
+  hi NonText ctermbg=NONE
+  "hi LineNr ctermbg=233
+  hi LineNr ctermbg=NONE
   hi DiffText ctermfg=81
-  hi Normal ctermbg=233
+  "hi Normal ctermbg=233
+  hi Normal ctermbg=NONE
   hi DbgBreakPt ctermbg=53
 endif
 

@@ -94,10 +94,11 @@ export LC_TIME=ja_JP.UTF-8
 export LC_NAME=ja_JP.UTF-8
 export WORDCHARS="*?_-.[]~&;!#$%^(){}<>"
 
-if which rbenv > /dev/null; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
-fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="/home/sasarky/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
 
 if which pyenv > /dev/null; then
     export PYENV_ROOT=/usr/local/opt/pyenv
@@ -105,8 +106,8 @@ if which pyenv > /dev/null; then
     eval "$(pyenv init -)";
 fi
 
-export GOPATH=~/gocode
-export PATH="$PATH:$GOPATH/bin"
+#export GOPATH=~/gocode
+#export PATH="$PATH:$GOPATH/bin"
 
 export PATH="$PATH:$HOME/.packer"
 
