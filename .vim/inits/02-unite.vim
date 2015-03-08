@@ -2,6 +2,15 @@
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
+" for git project
+function! DispatchUniteFileRecAsyncOrGit()
+  if isdirectory(getcwd()."/.git")
+    Unite file_rec/git
+  else
+    Unite file_rec/async
+  endif
+endfunction
+
 " keymap
 nnoremap [unite] <Nop>
 nmap f [unite]
@@ -13,7 +22,7 @@ nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir buffer file_mru bookmark f
 " ファイル一覧
 nnoremap <silent> [unite]f  :<C-u>Unite file<CR>
 " ファイル一覧 (再帰)
-nnoremap <silent> [unite]h  :<C-u>Unite file_rec<CR>
+nnoremap <silent> [unite]h  :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 " バッファ一覧
 nnoremap <silent> [unite]b  :<C-u>Unite buffer<CR>
 " 常用セット
@@ -83,3 +92,4 @@ function! s:unite_gitignore_source()
 endfunction
 
 call s:unite_gitignore_source()
+
