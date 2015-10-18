@@ -23,11 +23,6 @@ set autoindent
 set smartindent
 set cindent
 set expandtab
-set tabstop=4 shiftwidth=4 softtabstop=4
-
-au BufRead,BufNewFile *.coffee  set filetype=coffee
-autocmd FileType coffee set ts=2 sw=2 expandtab
-
 
 "検索設定
 set ignorecase                  "大文字と小文字を区別しない

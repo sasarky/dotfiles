@@ -1,4 +1,5 @@
-.vim/bundle
+.vim/bundle/*
+!.vim/bundle/.keep
 .vim/snippets
 .vim/.netrwhist
 .emacs.d/elpa/

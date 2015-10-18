@@ -97,9 +97,6 @@ export WORDCHARS="*?_-.[]~&;!#$%^(){}<>"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-export PATH="/home/sasarky/.phpenv/bin:$PATH"
-eval "$(phpenv init -)"
-
 if which pyenv > /dev/null; then
     export PYENV_ROOT=/usr/local/opt/pyenv
     export PATH=$PYENV_ROOT/shims:$PATH
